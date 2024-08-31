@@ -5,6 +5,12 @@ Listado de cliente
 {% endblock header %}
 
 {% block main %}
+    <button><a href="{% url 'cliente_create' %}">Alta de Cliente</a></button>
+    {% for object in object_list %}
+        <p>{{ object.apellido | upper }}, {{ object.nombre | upper }} - TEL.: {{ object.telefono}} </p>
+    {% empty %}
+        <p>La base de datos de clientes no tiene registros</p>
+    {% endfor %}
 {% endblock main %}
 
 {% block footer %}

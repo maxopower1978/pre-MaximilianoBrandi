@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from .forms import ClienteForm, AsesoramientoForm, CitaForm
 from .models import Cliente, Asesoramiento, Cita
+
 
 
 def index(request):
@@ -24,11 +26,32 @@ def cita_list(request):
     return render(request, "estudiojuridico/cita_list.html", context)
 
 
-# def cliente_create(request):
-#     pass
+def cliente_create(request):
+    if request.method == "GET":
+        form = ClienteForm()
+    if request.method == "POST":
+        form = ClienteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("cliente_list")
+    return render(request, "estudiojuridico/cliente_create.html", {"form": form})
 
-# def asesoramiento_create(request):
-#     pass
+def asesoramiento_create(request):
+    if request.method == "GET":
+        form = AsesoramientoForm()
+    if request.method == "POST":
+        form = AsesoramientoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("Asesoramiento_list")
+    return render(request,"estudiojuridico/asesoramiento_create.html", {"form": form})
 
-# def cita_create(request):
-#     pass
+def cita_create(request):
+    if request.method == "GET":
+        form = CitaForm()
+    if request.method == "POST":
+        form = CitaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("Cita_list")
+    return render(request,"estudiojuridico/cita_create.html", {"form": form})

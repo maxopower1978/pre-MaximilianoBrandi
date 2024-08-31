@@ -52,9 +52,10 @@ class Cita(models.Model):
     motivo_consulta = models.TextField()
     fecha_solicitud = models.DateField(auto_now_add=True)
     fecha_cita = models.DateField(blank=True, null=True)
+    hora = models.TimeField(blank=True, null=True)
     estado = models.CharField(
         max_length=20, choices=Estado.choices, default=Estado.PENDIENTE
     )
 
     def __str__(self):
-        return f"{self.cliente} - solicito asesoramiento en {self.derecho} - Consultando por: {self.motivo_consulta}, y quiere una cita para el {self.fecha_solicitud} / Agendada {self.fecha_cita} - Estado: {self.estado}"
+        return f"{self.cliente} - solicito asesoramiento en {self.derecho} - Consultando por: {self.motivo_consulta}, y quiere una cita para el {self.fecha_solicitud} / Agendada {self.fecha_cita} {self.hora}- Estado: {self.estado}"

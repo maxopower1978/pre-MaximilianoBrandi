@@ -5,6 +5,13 @@ Lista de citas
 {% endblock header %}
 
 {% block main %}
+    <button><a href="{% url 'cita_create' %}">Agendar cita</a></button>
+    {% for object in object_list %}
+        <p>{{ object.cliente | upper }} - {{ object.telefono }}</p>
+        <p>{{ object.motivo_consulta | upper }} - {{ object.fecha_cita | date:"d/m/Y" }} - {{ object.hora }} - {{ object.estado }}</p>
+    {% empty %}
+        <p>No hay citas registradas</p>
+    {% endfor %}
 {% endblock main %}
 
 {% block footer %}

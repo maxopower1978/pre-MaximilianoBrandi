@@ -23,7 +23,7 @@ class AsesoramientoAdmin(admin.ModelAdmin):
 
 @admin.register(Cita)
 class CitaAdmin(admin.ModelAdmin):
-    list_display = ("cliente", "derecho", "estado", "fecha_solicitud", "fecha_cita")
+    list_display = ("cliente", "derecho", "estado", "fecha_solicitud", "fecha_cita", "hora")
     list_filter = ("estado", "fecha_solicitud")
     search_fields = ("cliente__nombre", "asesoramiento__derecho")
     ordering = ("fecha_cita",)

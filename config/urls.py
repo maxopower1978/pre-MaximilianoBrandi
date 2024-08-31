@@ -25,4 +25,8 @@ urlpatterns = [
     path("cliente/list/", views.cliente_list, name="cliente_list"),
     path("asesoramiento/list/", views.asesoramiento_list, name="asesoramiento_list"),
     path("cita/list/", views.cita_list, name="cita_list"),
+    path("cliente/create/", views.cliente_create, name="cliente_create"),
+    path("asesoramiento/create/", views.asesoramiento_create, name="asesoramiento_create"),
+    path("cita/create/", views.cita_create, name="cita_create"),
+
 ]
