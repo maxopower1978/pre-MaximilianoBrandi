@@ -1,0 +1,16 @@
+{% extends 'estudiojuridico/base.html' %}
+
+{% block header %}
+Estudio Jurídico Dra. F.R.    
+{% endblock header %}
+
+{% block main %}
+    <button><a href="{% url 'index' %}">👩‍⚖️ El estudio</a></button>
+    <button><a href="{% url 'cliente_list' %}">Clientes</a></button>
+    <button><a href="{% url 'asesoramiento_list' %}">Asesoramientos</a></button>
+    <button><a href="{% url 'cita_list' %}">Citas</a></button>
+{% endblock main %}
+
+{% block footer %}
+(R) Todos los derechos reservados
+{% endblock footer %}
