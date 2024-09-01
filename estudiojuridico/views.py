@@ -43,7 +43,7 @@ def asesoramiento_create(request):
         form = AsesoramientoForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("Asesoramiento_list")
+            return redirect("asesoramiento_list")
     return render(request,"estudiojuridico/asesoramiento_create.html", {"form": form})
 
 def cita_create(request):
@@ -53,5 +53,5 @@ def cita_create(request):
         form = CitaForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("Cita_list")
+            return redirect("cita_list")
     return render(request,"estudiojuridico/cita_create.html", {"form": form})
