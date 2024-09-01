@@ -7,8 +7,8 @@ Lista de Asesoramientos
 {% block main %}
     <button><a href="{% url 'asesoramiento_create' %}">Alta de Asesoramiento</a></button>
     {% for object in object_list %}
-        <p style="color:blue;text-align: center;">{{ object.derecho | upper }}</p>
-        <p>{{object.descripcion}}</p>
+        <p style="max-width: 800px; margin: 20px auto; padding: 20px; color:blue;text-align: center;">{{ object.derecho | upper }}</p>
+        <p style="max-width: 800px; margin: 20px auto; padding: 20px;">{{object.descripcion}}</p>
     {% empty %}
         <p>La base de datos de Asesoramientos no tiene registros</p>
     {% endfor %}

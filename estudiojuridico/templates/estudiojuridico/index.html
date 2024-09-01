@@ -1,8 +1,60 @@
-{% extends 'estudiojuridico/base.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Florencia Reybet</title>
 
-{% block header %}
-Estudio Jurídico Dra. F.R.    
-{% endblock header %}
+</head>
+<body style="font-family: 'Arial', sans-serif;margin: 0;padding: 0;background-color: white;color: gray;">
+    <header style="background-color: #2c3e50; color: white; padding: 20px 0; text-align: center;">
+        <h1 style ="margin: 0;"">Dra. Florencia Reybet</h1>
+        <p>Abogada especializada en Derecho de familia, sucesiones y trámites jubilatorios</p>
+    </header>
 
-{% block main %}
-{% endblock main %}
+    <nav style="margin: 20px 0; text-align: center;">
+        <button><a href="{% url 'index' %}"; style="margin: 0 15px; text-decoration: none; color: #2c3e50;">Sobre mí</a></button>
+        <button><a href="{% url 'cliente_list' %}"; style="margin: 0 15px; text-decoration: none; color: #2c3e50;">Clientes</a></button>
+        <button><a href="{% url 'asesoramiento_list' %}"; style="margin: 0 15px; text-decoration: none; color: #2c3e50;">Asesoramiento</a></button>
+        <button><a href="{% url 'cita_list' %}"; style="margin: 0 15px; text-decoration: none; color: #2c3e50;">Cita</a></button>
+    </nav>
+
+    <section id="sobre-mi"; style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: white;">
+        <h2>Sobre mí</h2>
+        <p>Soy Florencia Reybet, abogada especializada en derecho de familia, sucesiones y trámites jubilatorios. Con años de experiencia en el campo juridico legal, me especializo en ofrecer asesoramiento y representación legal con un enfoque personalizado y profesional.</p>
+        <center><img src="images/abogada1.jpg" alt="Imagen de abogacía"></center>
+    </section>
+
+    <section id="servicios"; style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: white;">
+        <h2>Servicios</h2>
+        <ul>
+            <li>Derecho de familia</li>
+            <li>Sucesiones</li>
+            <li>Trámites jubilatorios</li>
+        </ul>
+        <center><img src="images/abogada2.jpg" alt="Imagen de servicios legales"; style="max-width: 100%; height: auto; margin-top: 20px;"></center>
+    </section>
+
+    <section id="proyectos"; style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: white;">
+        <h2>Proyectos</h2>
+        <p>A lo largo de mi carrera, he trabajado en numerosos casos y proyectos que han ayudado a mis clientes a alcanzar sus objetivos legales y personales. Algunos de los proyectos más destacados incluyen:</p>
+        <ul>
+            <li>Asesoramiento y representación en casos de divorcio y custodia de menores</li>
+            <li>Gestión de herencias y sucesiones complejas</li>
+            <li>Tramitación de pensiones y jubilaciones, nacionales e internacionales</li>
+        </ul>
+        <center><img src="images/abogada3.jpg" alt="Imagen de proyectos legales"></center>
+    </section>
+
+    <section id="contacto"; style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: white;">
+        <h2>Contacto</h2>
+        <p>Si necesitas asesoramiento legal o deseas agendar una consulta, no dudes en contactarme:</p>
+        <p>Email: <a href="mailto:florreybet@gmail.com">florreybet@gmail.com</a></p>
+        <p>Teléfono: +54 9 341 5639413</p>
+        <p>----------------------------------------------------------------------------------------</p>
+    </section>
+
+    <footer style="background-color: #2c3e50; color: white; text-align: center; padding: 10px 0; position: fixed; width: 100%; bottom: 0;">
+        <p>&copy; 2024 Florencia Reybet - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
